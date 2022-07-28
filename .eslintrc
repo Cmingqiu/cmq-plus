@@ -1,0 +1,26 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2021": true
+  },
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "sourceType": "module",
+    "ecmaVersion": "latest"
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:vue/vue3-recommended",
+    "@vue/eslint-config-typescript",
+    "plugin:@typescript-eslint/recommended",
+    "@vue/typescript/recommended"
+  ],
+  "globals": {
+    "defineOptions": "readonly",
+    "defineProps": "readonly",
+    "defineEmits": "readonly"
+  },
+  "rules": {}
+}

@@ -1,0 +1,26 @@
+@use '../mixins/mixins.scss' as *;
+
+@include b('icon') {
+  width: 1em;
+  height: 1em;
+  svg {
+    width: 1em;
+    height: 1em;
+  }
+  @include when('loading') {
+    animation: rotating 1.5s linear infinite;
+  }
+  /* 
+  @include e('e') {
+    color: red;
+  } */
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

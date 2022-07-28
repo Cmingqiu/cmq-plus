@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es6", //最低兼容es6版本
+    "module": "esnext",
+    "esModuleInterop": true, // 支持模块转化
+    "declaration": false,
+    "noImplicitAny": true, //支持类型不标注，默认any
+    "jsx": "preserve",
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "removeComments": true,
+    "noLib": false, //不处理类库
+    "sourceMap": true,
+    "lib": ["DOM", "ESNext"], // 编译用到的库
+    "types": ["unplugin-vue-define-options"],
+    "allowSyntheticDefaultImports": true, //允许没有导出的模块中引入
+    "experimentalDecorators": true, // 装饰器语法
+    "forceConsistentCasingInFileNames": true, // 强制区分大小写
+    "resolveJsonModule": true, // 解析json模块
+    "strict": true //严格模式
+  },
+  "exclude": ["node_modules", "dist/**", "**/__tests__"]
+}

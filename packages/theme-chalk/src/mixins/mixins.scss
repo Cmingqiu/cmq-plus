@@ -1,0 +1,32 @@
+@use './config.scss' as *;
+@forward './config.scss';
+
+@mixin b($blockName) {
+  .#{$namespace + '-' + $blockName} {
+    @content;
+  }
+}
+
+@mixin when($state) {
+  @at-root {
+    &.#{$state-prefix + $state} {
+      @content;
+    }
+  }
+}
+
+@mixin e($elementName) {
+  @at-root {
+    #{& + $element-separator + $elementName} {
+      @content;
+    }
+  }
+}
+
+@mixin m($modifier) {
+  @at-root {
+    #{& + $modifier-separator + $modifier} {
+      @content;
+    }
+  }
+}
